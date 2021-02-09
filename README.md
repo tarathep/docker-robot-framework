@@ -20,6 +20,13 @@ custom robot framework include libs base on from ppodgorsek/docker-robot-framewo
 - [Robot MongoDB Library 0.0.4](https://pypi.org/project/robot-mongodb-library)
 - RESTinstance 1.0.2
 
+**1.0.1** Support on Python3.9.0
+- Support Execute on pipeline jenkins with Command
+```
+sh "xvfb-run --server-args="-screen 0 800x600x16 -ac" robot --outputDir $ROBOT_REPORTS_DIR ${ROBOT_OPTIONS} $ROBOT_TES
+TS_DIR"
+```
+
 
 ## How to use
 ``` docker run --rm -v {path_file_reports}:/opt/robotframework/reports:Z -v {path_file_tests}:/opt/robotframework/tests:Z kietara/robot-framework:1.0.0 ```
